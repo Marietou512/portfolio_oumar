@@ -31,7 +31,7 @@ data = {
     ],
     
     'langues': {
-        'Français': 'Courant',
+        'Français': '',
         'Arabe': 'Niveau B1',
         'Anglais': 'Intermédiaire (en progression)'
     },
