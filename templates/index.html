@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ profile.name }} — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-bar">
+    <div class="logo">{{ profile.name }}</div>
+    <ul class="nav-links">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="top-actions">
+      <a class="btn outline" href="/static/cv/MAGASSA_Oumar_CV.pdf" target="_blank" rel="noopener">CV</a>
+      {% if profile.github %}<a class="btn outline" href="{{ profile.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+      {% if profile.linkedin %}<a class="btn outline" href="{{ profile.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+    </div>
+  </div>
+</header>
+
+<!-- ACCUEIL -->
+<section id="accueil" class="section active">
+  <div class="container hero">
+    <h1>{{ profile.name }}</h1>
+    <h2>{{ profile.title }}</h2>
+    <p class="lead">
+      Construit des solutions data robustes mêlant analyse statistique, optimisation mathématique et IA
+      pour produire des décisions mesurables et exploitables en conditions réelles.
+    </p>
+
+
+  </div>
+</section>
+
+<!-- PROJETS -->
+<section id="projets" class="section">
+  <div class="container">
+    <h2>Projets réalisés</h2>
+    <div class="grid projects">
+      {% for p in projects %}
+      <article class="card">
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+        {% if p.technologies %}
+        <div class="tags">
+          {% for t in p.technologies %}
+          <span class="tag">{{ t }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if p.github %}
+        <div class="card-actions">
+          <a class="btn outline" href="{{ p.github }}" target="_blank" rel="noopener">Voir sur GitHub</a>
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section id="competences" class="section">
+  <div class="container">
+    <h2>Compétences</h2>
+    <div class="grid skills">
+      {% for cat, items in skills.items() %}
+      <article class="card">
+        <h3>{{ cat }}</h3>
+        <ul class="skill-list">
+          {% for it in items %}
+          <li>{{ it }}</li>
+          {% endfor %}
+        </ul>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container contact">
+    <h2>Contact</h2>
+    <p>
+      {% if profile.email %}Email : <a href="mailto:{{ profile.email }}">{{ profile.email }}</a><br>{% endif %}
+      {% if profile.phone %}Téléphone : {{ profile.phone }}<br>{% endif %}
+      {% if profile.location %}Localisation : {{ profile.location }}{% endif %}
+    </p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© {{ profile.name }} — {{ profile.title }}</p>
+  </div>
+</footer>
+
+<script src="/static/js/script.js"></script>
+</body>
+</html>
