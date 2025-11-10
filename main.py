@@ -41,7 +41,7 @@ data = {
             'diplome': 'Master Mathématiques Appliquées aux Données',
             'etablissement': 'Université Sorbonne Paris Nord, Villetaneuse',
             'periode': '2024 – 2026',
-            'details': 'Bourse d\'excellence. Parcours axé sur l\'optimisation et la science des données, avec des compétences en modélisation de problèmes (programmation linéaire et entière), optimisation numérique et combinatoire, apprentissage statistique, deep learning, ainsi qu\'en traitement et analyse de données.'
+            'details': 'Parcours axé sur l\'optimisation et la science des données, avec des compétences en modélisation de problèmes (programmation linéaire et entière), optimisation numérique et combinatoire, apprentissage statistique, deep learning, ainsi qu\'en traitement et analyse de données.'
         },
         {
             'diplome': 'Licence Mathématiques Appliquées',
