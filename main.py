@@ -19,7 +19,7 @@ data = {
         'R': 'En cours d\'apprentissage pour l\'analyse statistique et la data science',
         'LaTeX': 'Rédaction de documents scientifiques et rapports mathématiques',
         'C/C++': 'En cours d\'apprentissage pour l\'implémentation d\'algorithmes',
-        'SQL': 'Notions de base pour la gestion de bases de données',
+        'PL/SQL': 'Notions de base pour la gestion de bases de données',
         'Outils bureautiques': 'Bonne maîtrise de Word et Excel'
     },
     
