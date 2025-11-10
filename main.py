@@ -12,7 +12,6 @@ data = {
     'localisation': '93430, Villetaneuse, France',
     'linkedin': 'linkedin.com/in/oumar-magassa-6597b029b',
     'github': 'github.com/oumarmagassa',
-    'date_naissance': '26 mars 2004',
     
     'competences_info': {
         'Python': 'Modélisation mathématique et analyse de données (pandas, scikit-learn)',
@@ -62,7 +61,7 @@ data = {
         {
             'id': 1,
             'titre': 'Apprentissage Statistique (TER)',
-            'periode': 'Mars 2024 – Juin 2025',
+            'periode': 'Mars 2025 – Juin 2025',
             'lieu': 'Laboratoire LAGA - Université Sorbonne Paris Nord',
             'encadrant': 'Thanh Mai PHAM NGOC',
             'description': (
