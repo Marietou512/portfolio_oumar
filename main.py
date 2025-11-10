@@ -20,6 +20,7 @@ data = {
         'LaTeX': 'Rédaction de documents scientifiques et rapports mathématiques',
         'C/C++': 'En cours d\'apprentissage pour l\'implémentation d\'algorithmes',
         'PL/SQL': 'Notions de base pour la gestion de bases de données',
+        'Git': 'Gestion de versions et collaboration sur projets',
         'Outils bureautiques': 'Bonne maîtrise de Word et Excel'
     },
     
