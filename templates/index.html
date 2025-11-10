@@ -33,6 +33,10 @@
     <section id="accueil" class="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="profile-photo">
+                    <!-- Remplacez profile.svg par profile.jpg avec votre photo -->
+                    <img src="{{ url_for('static', filename='img/ma_photo.jpg') }}" alt="{{ data.nom }}">
+                </div>
                 <h1 class="hero-title">{{ data.nom }}</h1>
                 <p class="hero-subtitle">{{ data.titre }}</p>
                 <p class="hero-description">{{ data.recherche }}</p>
@@ -47,7 +51,7 @@
                     <a href="https://{{ data.github }}" target="_blank" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="mailto:{{ data.email }}" title="Email">
+                    <a href="/cdn-cgi/l/email-protection#542f2f74303520357a3139353d38742929" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -213,7 +217,9 @@
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <div class="contact-content">
-                <p class="contact-intro">Vous avez un projet, une opportunité de stage ou simplement envie d'échanger ? N'hésitez pas à me contacter !</p>
+                <p class="contact-intro">Vous avez un projet, une opportunité de stage ou simplement envie d'échanger ? 
+                  <br>
+                  N'hésitez pas à me contacter !</p>
                 <div class="contact-grid">
                     <a href="mailto:{{ data.email }}" class="contact-card">
                         <i class="fas fa-envelope"></i>
