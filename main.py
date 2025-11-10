@@ -63,6 +63,8 @@ data = {
             'id': 1,
             'titre': 'Apprentissage Statistique (TER)',
             'periode': 'Mars 2024 – Juin 2025',
+            'lieu': 'Laboratoire LAGA - Université Sorbonne Paris Nord',
+            'encadrant': 'Thanh Mai PHAM NGOC',
             'description': (
                 'Projet de régression non paramétrique appliqué à des données réelles issues d\'un crash moto. '
                 'Estimation de la relation entre le temps et l\'accélération grâce à l\'estimateur à noyau, sans imposer de modèle linéaire. '
@@ -78,6 +80,8 @@ data = {
             'id': 2,
             'titre': 'Optimisation combinatoire – Problème du Voyageur de Commerce (TSP)',
             'periode': 'Nov. 2024 – Jan. 2025',
+            'lieu': 'Laboratoire LAGA - Université Sorbonne Paris Nord',
+            'encadrant': 'Emmanuel Audusse et Francis Nier',
             'description': (
                 'Étude, modélisation et résolution du TSP à partir d\'un cas réel en comparant plusieurs méthodes d\'optimisation combinatoire. '
                 'Implémentation et tests de trois approches (force brute, plus proche voisin et algorithme génétique) sur un ensemble de 10 villes réelles avec de vraies distances mesurées afin d\'évaluer concrètement la performance des algorithmes. '
@@ -104,29 +108,7 @@ data = {
     ],
     
     'experiences': [
-        {
-            'poste': 'Travail d\'étude et de recherche (TER)',
-            'entreprise': 'Laboratoire LAGA - Université Sorbonne Paris Nord',
-            'periode': 'Mars 2024 – Juin 2025',
-            'encadrant': 'Thanh Mai PHAM NGOC',
-            'details': [
-                'Codage en Python d\'une chaîne reproductible (prétraitement, simulations, figures)',
-                'Implémentation et comparaison d\'estimateurs à noyau (Nadaraya-Watson) et régresseurs locaux',
-                'Protocole de simulation et sélection automatique de h par validation croisée (LOO)',
-                'Application sur le jeu mcycle (MASS) : code, figures et rapport LaTeX'
-            ]
-        },
-        {
-            'poste': 'Projet d\'optimisation combinatoire',
-            'entreprise': 'Laboratoire LAGA - Université Sorbonne Paris Nord',
-            'periode': 'Nov. 2024 – Jan. 2025',
-            'encadrant': 'Emmanuel Audusse et Francis Nier',
-            'details': [
-                'Modélisation et résolution du problème du voyageur de commerce',
-                'Développement d\'algorithmes et modélisation mathématiques',
-                'Amélioration de la réduction de coût et des performances de calcul'
-            ]
-        },
+          
         {
             'poste': 'Projet d\'analyse numérique',
             'entreprise': 'Laboratoire LAGA - Université Sorbonne Paris Nord',
