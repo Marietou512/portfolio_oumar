@@ -34,7 +34,6 @@
         <div class="container">
             <div class="hero-content">
                 <div class="profile-photo">
-        
                     <img src="{{ url_for('static', filename='img/ma_photo.jpg') }}" alt="{{ data.nom }}">
                 </div>
                 <h1 class="hero-title">{{ data.nom }}</h1>
@@ -164,7 +163,28 @@
                         <h3>{{ projet.titre }}</h3>
                         <span class="project-date">{{ projet.periode }}</span>
                     </div>
-                    <p>{{ projet.description }}</p>
+                    <p class="project-description">{{ projet.description }}</p>
+                    
+                    {% if projet.technologies %}
+                    <div class="project-technologies">
+                        {% for tech in projet.technologies %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    
+                    <div class="project-links">
+                        {% if projet.github %}
+                        <a href="{{ projet.github }}" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Voir le projet
+                        </a>
+                        {% endif %}
+                        {% if projet.demo %}
+                        <a href="{{ projet.demo }}" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Démo
+                        </a>
+                        {% endif %}
+                    </div>
                 </div>
                 {% endfor %}
             </div>
@@ -217,11 +237,9 @@
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <div class="contact-content">
-                <p class="contact-intro">Vous avez un projet, une opportunité de stage ou simplement envie d'échanger ? 
-                  <br>
-                  N'hésitez pas à me contacter !</p>
+                <p class="contact-intro">Vous avez un projet, une opportunité de stage ou simplement envie d'échanger ? N'hésitez pas à me contacter !</p>
                 <div class="contact-grid">
-                    <a href="mailto:{{ data.email }}" class="contact-card">
+                    <a href="/cdn-cgi/l/email-protection#7b00005b1f1a0f1a551e161a12175b0606" class="contact-card">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
                         <p>{{ data.email }}</p>
@@ -249,11 +267,9 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy;  {{ data.nom }}</p>
-            
+            <p>&copy; {{ data.nom }}. Tous droits réservés.</p>
+           
         </div>
     </footer>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-</html>
+    <script dat

@@ -19,7 +19,7 @@ data = {
         'R': 'En cours d\'apprentissage pour l\'analyse statistique et la data science',
         'LaTeX': 'Rédaction de documents scientifiques et rapports mathématiques',
         'C/C++': 'En cours d\'apprentissage pour l\'implémentation d\'algorithmes',
-        'PL/SQL': 'Notions de base pour la gestion de bases de données',
+        'SQL': 'Notions de base pour la gestion de bases de données',
         'Git': 'Gestion de versions et collaboration sur projets',
         'Outils bureautiques': 'Bonne maîtrise de Word et Excel'
     },
@@ -60,9 +60,46 @@ data = {
     
     'projets': [
         {
-            'titre': 'Optimisation d\'un planning d\'équipages',
+            'id': 1,
+            'titre': 'Apprentissage Statistique (TER)',
+            'periode': 'Mars 2024 – Juin 2025',
+            'description': (
+                'Projet de régression non paramétrique appliqué à des données réelles issues d\'un crash moto. '
+                'Estimation de la relation entre le temps et l\'accélération grâce à l\'estimateur à noyau, sans imposer de modèle linéaire. '
+                'Sélection automatique de la largeur de bande h par validation croisée leave-one-out afin de trouver le meilleur niveau de lissage. '
+                'Les résultats permettent d\'identifier le moment de l\'impact (vers 15-20 ms), d\'observer une phase de fortes vibrations puis un retour progressif vers l\'équilibre. '
+                'La comparaison de plusieurs noyaux montre que la performance dépend principalement du choix optimal de h plutôt que du type de noyau utilisé.'
+            ),
+            'technologies': ['Python', 'pandas', 'NumPy', 'scikit-learn', 'Matplotlib', 'LaTeX'],
+            'github': 'https://github.com/oumarmagassa/Statistiques/blob/main/Rapport_TER_Oumar_MAGASSA_modifi%C3%A9.pdf',
+            'demo': None
+        },
+        {
+            'id': 2,
+            'titre': 'Optimisation combinatoire – Problème du Voyageur de Commerce (TSP)',
+            'periode': 'Nov. 2024 – Jan. 2025',
+            'description': (
+                'Étude, modélisation et résolution du TSP à partir d\'un cas réel en comparant plusieurs méthodes d\'optimisation combinatoire. '
+                'Implémentation et tests de trois approches (force brute, plus proche voisin et algorithme génétique) sur un ensemble de 10 villes réelles avec de vraies distances mesurées afin d\'évaluer concrètement la performance des algorithmes. '
+                'Les résultats montrent que si la force brute garantit l\'optimum mais devient rapidement inutilisable lorsque le nombre de villes augmente, l\'algorithme génétique permet d\'obtenir une solution quasiment optimale avec un temps de calcul nettement inférieur, ce qui valide l\'intérêt des heuristiques pour des problématiques industrielles réelles.'
+            ),
+            'technologies': ['Python', 'Optimisation', 'Graphes', 'Heuristiques'],
+            'github': 'https://github.com/oumarmagassa/Optimisation/blob/main/Projet_Probl%C3%A8me_du_voyageur_de_commerce.pdf',
+            'demo': None
+        },
+        {
+            'id': 3,
+            'titre': 'Recherche Opérationnelle – Planning d\'équipages (PLNE)',
             'periode': 'Août 2025 – Sept. 2025',
-            'description': 'Conception d\'un modèle de programmation linéaire en nombres entiers (PLNE) pour optimiser l\'affectation de 10 équipages à 20 vols sur 30 jours, sous contraintes de repos et de disponibilité. Implémentation en Python (PuLP, pandas) avec génération automatique d\'un planning optimal à coût minimal, dans le cadre d\'une préparation à un stage en recherche opérationnelle chez Air France.'
+            'description': (
+                'Modèle de programmation linéaire en nombres entiers pour affecter 10 équipages à 20 vols sur 30 jours '
+                'sous contraintes réelles (temps de repos réglementaire, disponibilité, capacité opérationnelle). '
+                'Implémentation en Python (PuLP, pandas) pour déterminer un planning faisable et à coût minimal. '
+                'La solution finale obtenue correspond à l\'affectation optimale, exportée en fichier CSV modifiable.'
+            ),
+            'technologies': ['Python', 'PuLP', 'pandas', 'PLNE', 'OR'],
+            'github': 'https://github.com/oumarmagassa/Recherche-Op-rationnelle/blob/main/Mini_Projet_Recherche_Op%C3%A9rationnelle.ipynb%20-%20Colab.pdf',
+            'demo': None
         }
     ],
     
