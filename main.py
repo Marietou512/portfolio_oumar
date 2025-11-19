@@ -60,6 +60,26 @@ data = {
     'projets': [
         {
             'id': 1,
+            'titre': 'Analyse de données réseau mobile',
+            'periode': 'Octobre 2025 – Novembre 2025',
+            'lieu': 'Projet personnel – Domaine Data / Réseau',
+            'encadrant': None,
+            'description': (
+                "Analyse complète d’un jeu de données simulant le fonctionnement d’antennes mobiles. "
+                "Exploration des métriques réseau (latence, débit, taux d’erreur, température), détection automatique des anomalies "
+                "et création de visualisations avancées (heatmaps horaires, comparaisons d’antennes). "
+                "L’étude met en évidence une antenne en surcharge chronique, caractérisée par des pics de latence, des chutes de débit "
+                "et un taux d’erreur élevé, confirmés par la comparaison avec une antenne saine. "
+                "Des recommandations d’optimisation (augmentation de capacité, gestion de charge, amélioration du backhaul) ont été formulées "
+                "à partir des résultats."
+            ),
+            'technologies': ['Python', 'pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
+            'github': 'https://github.com/oumarmagassa/Analyse-de-donn-es-/tree/main',
+            'demo': None
+       },
+
+        {
+            'id': 3,
             'titre': 'Apprentissage Statistique (TER)',
             'periode': 'Mars 2025 – Juin 2025',
             'lieu': 'Laboratoire LAGA - Université Sorbonne Paris Nord',
@@ -76,7 +96,7 @@ data = {
             'demo': None
         },
         {
-            'id': 2,
+            'id': 4,
             'titre': 'Optimisation combinatoire – Problème du Voyageur de Commerce (TSP)',
             'periode': 'Nov. 2024 – Jan. 2025',
             'lieu': 'Laboratoire LAGA - Université Sorbonne Paris Nord',
@@ -91,7 +111,7 @@ data = {
             'demo': None
         },
         {
-            'id': 3,
+            'id': 2,
             'titre': 'Recherche Opérationnelle – Planning d\'équipages (PLNE)',
             'periode': 'Août 2025 – Sept. 2025',
             'description': (
@@ -104,7 +124,7 @@ data = {
             'github': 'https://github.com/oumarmagassa/Recherche-Op-rationnelle/blob/main/Mini_Projet_Recherche_Op%C3%A9rationnelle.ipynb%20-%20Colab.pdf',
             'demo': None
         }
-    ],
+        ],
     
     'experiences': [
           
