@@ -85,34 +85,39 @@ body {
     transition: var(--transition);
 }
 
-/* Hero Section - Photo en arrière-plan */
+/* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('votre-photo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('ma_photo.jpg') no-repeat center center/cover;
+    
     color: white;
     padding: 150px 0 100px;
     text-align: center;
     margin-top: 60px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-/* Masquer la photo circulaire */
 .profile-photo {
-    display: none;
+    margin: 0 auto 2rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     animation: fadeInDown 1s ease;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
@@ -120,7 +125,6 @@ body {
     margin-bottom: 1rem;
     opacity: 0.9;
     animation: fadeInDown 1s ease 0.2s both;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-description {
@@ -129,7 +133,6 @@ body {
     margin: 0 auto 2rem;
     opacity: 0.85;
     animation: fadeInUp 1s ease 0.4s both;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-buttons {
@@ -703,7 +706,9 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .profile-photo {
-        display: none;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1.5rem;
     }
 
     .nav-menu {
