@@ -6,11 +6,6 @@
     <title>{{ data.nom }} - Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --hero-bg-image: url('{{ url_for("static", filename="img/ma_photo.jpg") }}');
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -35,7 +30,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="accueil" class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('{{ url_for('static', filename='img/ma_photo.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: scroll;">
+    <section id="accueil" class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="profile-photo">
