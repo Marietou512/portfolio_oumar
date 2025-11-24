@@ -704,8 +704,34 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* On small screens show the inline circular profile image and disable background-image */
     .profile-photo {
-        display: none;
+        display: block;
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 1.5rem;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        border: 4px solid rgba(255,255,255,0.15);
+        background: white;
+    }
+
+    .profile-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .hero {
+        /* mobile browsers often ignore fixed backgrounds; use inline image instead */
+        background-image: none !important;
+        background-attachment: scroll !important;
+        background-color: var(--primary-color);
+        height: auto;
+        padding: 3rem 0 4rem;
+        margin-top: 60px;
     }
 
     .nav-menu {
