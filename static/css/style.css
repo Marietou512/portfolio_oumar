@@ -88,8 +88,9 @@ body {
 /* Hero Section - Photo en arrière-plan */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), var(--hero-bg-image);
-    background-size: cover;
-    background-position: center;
+    /* reduce zoom so face is visible: use a smaller background size and shift vertically */
+    background-size: 60% auto;
+    background-position: center 20%;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-color: var(--primary-color);
@@ -827,5 +828,38 @@ body {
 
     .subsection-title {
         font-size: 1.5rem;
+    }
+}
+
+/* Reduce background zoom on medium and small screens so image isn't overly cropped */
+@media (max-width: 1400px) {
+    .hero {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: auto; /* let content size the hero instead of forcing 100vh */
+        padding: 4rem 0 5rem;
+    }
+}
+
+/* Additional tweak for narrower screens to ensure the circular img is visible */
+@media (max-width: 1024px) {
+    .hero {
+        background-size: contain;
+        background-position: center top;
+        padding-top: 3.5rem;
+    }
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* On very large screens keep cover to fill the viewport */
+@media (min-width: 1600px) {
+    .hero {
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
     }
 }
